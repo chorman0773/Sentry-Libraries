@@ -1,0 +1,6 @@
+rootProject.name = 'Sentry'
+
+include 'launch'
+include 'core'
+include 'launcher-control'
+

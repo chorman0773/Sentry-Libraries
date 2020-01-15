@@ -1,0 +1,6 @@
+/.gradle/
+/core/.gradle/
+/core/build/
+/launch/.gradle/
+/launch/build/
+/launcher-control/.gradle/

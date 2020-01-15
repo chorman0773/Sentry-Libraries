@@ -1,0 +1,17 @@
+
+
+group 'github.chorman0773.sentry'
+version '1.0'
+
+
+repositories {
+    mavenLocal()
+    maven {
+        url = "https://lightningcreations.github.io/Maven"
+        name = "Lightning Creations Maven"
+    }
+    jcenter()
+    mavenCentral()
+}
+
+
