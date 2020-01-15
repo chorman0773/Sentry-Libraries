@@ -19,6 +19,7 @@ public abstract class GameBasic extends Container implements GameLaunchArtifact,
     protected GameBasic() {
         this.info = new GameDescriptor(this.getClass());
         ctx = new AccessControlContext(new java.security.ProtectionDomain[]{GameBasic.class.getProtectionDomain()});
+        this.setPreferredSize(new Dimension(700,550));
     }
 
     @Override
@@ -34,8 +35,10 @@ public abstract class GameBasic extends Container implements GameLaunchArtifact,
 
     @Override
     public final void initialise(LauncherInterface lint, String[] args) {
+        this.setSize(this.getPreferredSize());
         this.lint = lint;
         this.args = args.clone();
+        lint.getCurrentDrawContainer().add(this);
     }
 
     @Override

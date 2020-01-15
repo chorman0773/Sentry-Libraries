@@ -28,9 +28,16 @@ dependencies {
 }
 
 publishing {
+    repositories {
+        maven {
+            def path = System.getProperty("user.home");
+            // change to point to your repo, e.g. http://my.org/repo
+            url = "$path/Maven"
+        }
+    }
     publications {
         maven(MavenPublication){
-            // from components.java
+            from components.java
         }
     }
 }
