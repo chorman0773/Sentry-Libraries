@@ -16,8 +16,8 @@ public abstract class GameBasic extends Container implements GameLaunchArtifact,
     private final IGameInfo<GameLaunchArtifact> info;
     private final AtomicBoolean close = new AtomicBoolean(false);
 
-    protected GameBasic(IGameInfo<GameLaunchArtifact> info) {
-        this.info = info;
+    protected GameBasic() {
+        this.info = new GameDescriptor(this.getClass());
         ctx = new AccessControlContext(new java.security.ProtectionDomain[]{GameBasic.class.getProtectionDomain()});
     }
 

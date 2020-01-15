@@ -1,5 +1,6 @@
 package github.chorman0773.sentry.launch;
 
+import github.lightningcreations.lcjei.IEngineInterface;
 import github.lightningcreations.lcjei.IGameInfo;
 import github.lightningcreations.lcjei.resources.ResourceSet;
 
@@ -15,7 +16,7 @@ import java.util.stream.Stream;
  * Interface for interacting with the Sentry Launcher.
  * An instance of this class is passed to Sentry
  */
-public interface LauncherInterface extends IGameInfo<GameLaunchArtifact> {
+public interface LauncherInterface extends IEngineInterface<GameLaunchArtifact> {
     /**
      * Closes the launcher window, stopping the game execution.
      */

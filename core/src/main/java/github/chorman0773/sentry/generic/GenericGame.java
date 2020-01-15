@@ -13,8 +13,7 @@ public abstract class GenericGame extends GameBasic {
     private final AtomicBoolean running = new AtomicBoolean();
     private final AtomicBoolean pauseWhileDisabled = new AtomicBoolean(true);
 
-    protected GenericGame(IGameInfo<GameLaunchArtifact> info) {
-        super(info);
+    protected GenericGame() {
     }
 
     protected final void setPauseWhileDisabled(boolean pause){
