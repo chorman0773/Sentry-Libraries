@@ -1,7 +1,7 @@
 package github.chorman0773.sentry.annotation;
 
-import github.chorman0773.sentry.LoadingPhase;
 import github.chorman0773.sentry.launch.LauncherInterface;
+import github.chorman0773.sentry.launch.LoadingPhase;
 
 import java.util.function.Consumer;
 
