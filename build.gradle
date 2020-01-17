@@ -1,4 +1,7 @@
 
+plugins {
+    id 'maven-publish'
+}
 
 group 'github.chorman0773.sentry'
 version '1.0'
@@ -14,4 +17,12 @@ repositories {
     mavenCentral()
 }
 
-
+publishing {
+    repositories {
+        maven {
+            def home = System.getProperty("user.home")
+            url = "$home/Maven"
+            name = "LightningCreations"
+        }
+    }
+}

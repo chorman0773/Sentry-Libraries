@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'maven-publish'
     id 'org.javamodularity.moduleplugin' version '1.6.0'
 }
 
@@ -38,15 +37,8 @@ task javadocJar(type: Jar){
 }
 
 publishing {
-    repositories {
-        maven {
-            def path = System.getProperty("user.home");
-            // change to point to your repo, e.g. http://my.org/repo
-            url = "$path/Maven"
-        }
-    }
     publications {
-        maven(MavenPublication){
+        core(MavenPublication){
             from components.java
             artifact sourceJar
             artifact javadocJar
