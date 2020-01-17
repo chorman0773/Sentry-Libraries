@@ -1,6 +1,5 @@
 package github.chorman0773.sentry.launcher.control;
 
-import java.awt.*;
 import java.net.URI;
 import java.nio.file.Path;
 

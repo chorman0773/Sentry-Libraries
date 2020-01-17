@@ -8,11 +8,14 @@ import github.lightningcreations.lcjei.IGameInfo;
 
 import java.util.UUID;
 
+/**
+ * Represents a Game Descriptor derived from a Game's annotation.
+ */
 public final class GameDescriptor implements IGameInfo<GameLaunchArtifact> {
     private final Class<? extends GameBasic> gameClass;
     private final Game gameAnnotation;
 
-    public GameDescriptor(Class<? extends GameBasic> gameClass){
+    GameDescriptor(Class<? extends GameBasic> gameClass){
         this.gameClass = gameClass;
         this.gameAnnotation = gameClass.getAnnotation(Game.class);
     }

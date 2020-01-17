@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -8,9 +9,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/authentication" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/launch" />
+            <option value="$PROJECT_DIR$/launcher" />
             <option value="$PROJECT_DIR$/launcher-control" />
+            <option value="$PROJECT_DIR$/launcher-installer" />
+            <option value="$PROJECT_DIR$/launcher-natives" />
             <option value="$PROJECT_DIR$/test" />
           </set>
         </option>

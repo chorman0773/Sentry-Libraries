@@ -1,9 +1,10 @@
 package github.chorman0773.sentry.annotation;
 
-import github.chorman0773.sentry.launch.LauncherInterface;
+import java.lang.annotation.*;
 
-import java.util.function.Consumer;
-
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
 public @interface Game {
     public String gameId();
     public String uuid();
@@ -12,5 +13,5 @@ public @interface Game {
 
     public LoadClass[] loadClasses() default {};
 
-    public Class<? extends Consumer<LauncherInterface>>[] loadingHooks() default {};
+    public LoadingHook[] loadingHooks() default {};
 }

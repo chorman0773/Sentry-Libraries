@@ -1,0 +1,26 @@
+
+plugins {
+    id 'java'
+}
+
+
+task 'cargo'(type: Exec){
+    group = "build"
+    description = "Builds a cargo crate"
+    workingDir '.'
+    commandLine 'cargo','build',"--lib","--target-dir","$buildDir/cargo"
+}
+task 'cargo-test'(type: Exec){
+    group = "verification"
+    description = "tests a cargo crate"
+    workingDir '.'
+    commandLine 'cargo','test','--lib'
+}
+
+test {
+    dependsOn 'cargo-test'
+}
+
+jar{
+    dependsOn 'cargo'
+}

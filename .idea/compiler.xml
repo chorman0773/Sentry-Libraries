@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="Sentry.launch-service.main" target="11" />
+      <module name="Sentry.launch-service.test" target="11" />
       <module name="Sentry.main" target="1.8" />
     </bytecodeTargetLevel>
   </component>

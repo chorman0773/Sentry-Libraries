@@ -13,7 +13,9 @@ public abstract class GenericGame extends GameBasic {
     private final AtomicBoolean running = new AtomicBoolean();
     private final AtomicBoolean pauseWhileDisabled = new AtomicBoolean(true);
 
-    protected GenericGame() {
+    protected GenericGame(int rate) {
+        this.updateRate = rate;
+        tickThread = new Thread(this::updateRunner);
     }
 
     protected final void setPauseWhileDisabled(boolean pause){
@@ -41,7 +43,6 @@ public abstract class GenericGame extends GameBasic {
 
     @Override
     public void run() {
-        tickThread = new Thread(this::updateRunner);
         tickThread.start();
         while(!this.shouldClose()){
             try {

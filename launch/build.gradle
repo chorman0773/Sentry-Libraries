@@ -32,6 +32,16 @@ jar {
     }
 }
 
+task sourceJar(type: Jar){
+    from sourceSets.main.allJava
+    archiveClassifier = "sources"
+}
+
+task javadocJar(type: Jar){
+    from javadoc
+    archiveClassifier = "javadoc"
+}
+
 publishing {
     repositories {
         maven {
@@ -41,8 +51,11 @@ publishing {
         }
     }
     publications {
-        maven(MavenPublication) {
+        maven(MavenPublication){
             from components.java
+            artifact sourceJar
+            artifact javadocJar
+            artifactId = project.archivesBaseName
         }
     }
 }

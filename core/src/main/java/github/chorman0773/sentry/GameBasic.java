@@ -8,6 +8,10 @@ import java.awt.*;
 import java.security.AccessControlContext;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * GameBasic is the root type of the Sentry Game Heirarchy,
+ *  all standard sentry games should inherit from GameBasic
+ */
 public abstract class GameBasic extends Container implements GameLaunchArtifact, Runnable {
     private LauncherInterface lint;
     private String[] args;
@@ -27,10 +31,21 @@ public abstract class GameBasic extends Container implements GameLaunchArtifact,
         return info;
     }
 
+    /**
+     * Obtains the current Game LauncherInterface
+     */
     public final LauncherInterface getLauncherInterface(){
         if(lint==null)
             throw new IllegalStateException("Game has not been initialized with an interface yet");
         return lint;
+    }
+
+    /**
+     * Returns a copy of the game arguments, if any.
+     * It is recommended that the caller cache the result
+     */
+    public final String[] getArgs(){
+        return args.clone();
     }
 
     @Override
@@ -56,8 +71,18 @@ public abstract class GameBasic extends Container implements GameLaunchArtifact,
         lint.doPrivileged(()->lint.close(),ctx);
     }
 
+    /**
+     * Called when the game initializes (override optional method).
+     * The default implementation does nothing.
+     * @throws Throwable THe implementation may throw any exception. If an exception is thrown, the game crashes.
+     */
     protected void onInit() throws Throwable{}
 
+    /**
+     * Checks if the game should shutdown.
+     * Games should take notice of this as soon as possible and, once noticed,
+     *  should complete there run methods quickly.
+     */
     protected final boolean shouldClose(){
         return this.close.getAcquire();
     }
@@ -72,6 +97,17 @@ public abstract class GameBasic extends Container implements GameLaunchArtifact,
             this.close.setRelease(true);
             th.interrupt();
         }
+        try {
+            th.join();
+        } catch (InterruptedException e) {
+        }
     }
+
+    /**
+     * Called when the game shutdowns (override optional method).
+     * The default implementation has no effect
+     * @throws Throwable The implementation can throw any exception. However, if an exception is thrown,
+     *  the game thread may complete abruptly (this is considered a game crash).
+     */
     protected void onDestroy() throws Throwable{}
 }
