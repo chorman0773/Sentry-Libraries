@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/authentication" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/foreign" />
             <option value="$PROJECT_DIR$/launch" />
             <option value="$PROJECT_DIR$/launcher" />
             <option value="$PROJECT_DIR$/launcher-control" />

@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'maven'
+    id 'maven-publish'
+}
+
+group 'github.chorman0773.sentry'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    maven {
+        url = "https://lightningcreations.github.io/Maven"
+        name = "Lightning Creations Maven"
+    }
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'github.lightningcreations', name: 'lcjei', version: '[1.0,2.0)'
+    compile group: 'github.chorman0773.sentry', name: 'launch', version: '[1.0,2.0)'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Automatic-Module-Name': 'github.chorman0773.sentry.foreign'
+        )
+    }
+}
+
+task sourceJar(type: Jar){
+    from sourceSets.main.allJava
+    archiveClassifier = "sources"
+}
+
+task javadocJar(type: Jar){
+    from javadoc
+    archiveClassifier = "javadoc"
+}
+
+publishing {
+    repositories {
+        maven {
+            def path = System.getProperty("user.home");
+            // change to point to your repo, e.g. http://my.org/repo
+            url = "$path/Maven"
+        }
+    }
+    publications {
+        maven(MavenPublication){
+            from components.java
+            artifact sourceJar
+            artifact javadocJar
+            artifactId = project.archivesBaseName
+        }
+    }
+}

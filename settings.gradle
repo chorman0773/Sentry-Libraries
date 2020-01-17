@@ -10,4 +10,5 @@ include 'launcher'
 include 'launcher-natives'
 include 'launcher-installer'
 include 'authentication'
+include 'foreign'
 
