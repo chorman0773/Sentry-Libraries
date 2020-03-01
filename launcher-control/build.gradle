@@ -1,3 +1,5 @@
+import java.time.Instant
+
 plugins {
     id 'java'
     id 'maven-publish'
@@ -42,6 +44,13 @@ publishing {
             artifact sourceJar
             artifact javadocJar
             artifactId = project.archivesBaseName
+        }
+        'launcher-controlSnapshot'(MavenPublication){
+            from components.java
+            artifact sourceJar
+            artifact javadocJar
+            artifactId = project.archivesBaseName
+            version = project.version+"-SNAPSHOT-"+ Instant.now().toString()
         }
     }
 }
