@@ -2,7 +2,6 @@ import java.time.Instant
 
 plugins {
     id 'java'
-    id 'org.javamodularity.moduleplugin' version '1.6.0'
 }
 
 group 'github.chorman0773.sentry'

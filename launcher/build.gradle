@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'maven-publish'
-    id 'org.javamodularity.moduleplugin' version '1.6.0'
     id 'application'
 }
 
@@ -22,11 +21,10 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'github.chorman0773.sentry', name: 'launch', version: "[1.0,2.0)"
-    compile group: 'github.chorman0773.sentry', name: 'core', version: "[1.0,2.0)"
-    compile group: 'github.chorman0773.sentry', name: 'launcher-control', version: "[1.0,2.0)"
-    compile group: 'github.chorman0773.sentry', name: 'foreign', version: "[1.0,2.0)"
-    compile group: 'github.chorman0773.pokemonsms', name: 'pkmcom-apl', version: "[1.0,2.0)"
+    compile project(":launch")
+    compile project(":core")
+    compile project(":launcher-control")
+    compile project(":foreign")
     testCompile group: 'github.chorman0773.sentry', name: 'test', version: "[1.0,2.0)"
     // https://mvnrepository.com/artifact/org.ow2.asm/asm
     compile group: 'org.ow2.asm', name: 'asm', version: '7.3.1'

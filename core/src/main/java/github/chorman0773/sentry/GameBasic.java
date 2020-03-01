@@ -1,16 +1,21 @@
 package github.chorman0773.sentry;
 
 import github.chorman0773.sentry.launch.GameLaunchArtifact;
+import github.chorman0773.sentry.launch.LauncherContext;
 import github.chorman0773.sentry.launch.LauncherInterface;
 import github.lightningcreations.lcjei.IGameInfo;
 
 import java.awt.*;
 import java.security.AccessControlContext;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * GameBasic is the root type of the Sentry Game Heirarchy,
- *  all standard sentry games should inherit from GameBasic
+ *  all standard sentry games should inherit from GameBasic.
+ *  GameBasic extends {@link Container}, so games can directly use AWT Components,
+ *   as well as use the Graphics Object Directly.
  */
 public abstract class GameBasic extends Container implements GameLaunchArtifact, Runnable {
     private LauncherInterface lint;
@@ -20,9 +25,22 @@ public abstract class GameBasic extends Container implements GameLaunchArtifact,
     private final IGameInfo<GameLaunchArtifact> info;
     private final AtomicBoolean close = new AtomicBoolean(false);
 
+    /**
+     * Gets the current game that is running.
+     * This should generally only be called from within
+     * @return
+     */
+    public static GameBasic getContextGame(){
+        return (GameBasic) LauncherContext.getLauncherContext().getLauncherInterface().getGameObject();
+    }
+
+    public static <T extends GameBasic> T getContextGame(Class<T> cl){
+        return cl.cast(LauncherContext.getLauncherContext().getLauncherInterface().getGameObject());
+    }
+
     protected GameBasic() {
         this.info = new GameDescriptor(this.getClass());
-        ctx = new AccessControlContext(new java.security.ProtectionDomain[]{GameBasic.class.getProtectionDomain()});
+        ctx = AccessController.doPrivileged((PrivilegedAction<AccessControlContext>) ()->new AccessControlContext(new java.security.ProtectionDomain[]{GameBasic.class.getProtectionDomain()}));
         this.setPreferredSize(new Dimension(700,550));
     }
 

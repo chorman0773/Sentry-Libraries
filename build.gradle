@@ -1,10 +1,17 @@
+import java.time.Instant
 
 plugins {
     id 'maven-publish'
+    id 'org.javamodularity.moduleplugin' version '1.6.0' apply false
+}
+
+subprojects{
+    apply plugin: 'org.javamodularity.moduleplugin'
+
 }
 
 group 'github.chorman0773.sentry'
-version '1.0'
+version '1.1'
 
 
 repositories {
@@ -28,12 +35,14 @@ publishing {
 }
 
 task publishSnapshotsToLocal{
+    group = 'publishing'
     dependsOn tasks.withType(PublishToMavenLocal).matching {
         e->e.getName().contains("Snapshot")
     }
 }
 
 task publishSnapshots{
+    group = 'publishing'
     dependsOn tasks.withType(PublishToMavenRepository).matching{
         e->e.getName().contains("Snapshot")
     }

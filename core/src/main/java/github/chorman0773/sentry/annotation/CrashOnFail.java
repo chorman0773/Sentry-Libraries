@@ -4,6 +4,9 @@ import github.chorman0773.sentry.GameCrash;
 
 import java.util.function.Consumer;
 
+/**
+ * A class for use in LoadClass, that unconditionally crashes on failure.
+ */
 public class CrashOnFail implements Consumer<String> {
 
     @Override

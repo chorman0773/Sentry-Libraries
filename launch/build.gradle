@@ -6,9 +6,9 @@ plugins {
 }
 
 group 'github.chorman0773.sentry'
-version '1.0'
+version '1.1'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     mavenLocal()
@@ -25,13 +25,6 @@ dependencies {
     compile group: 'github.lightningcreations', name: 'lcjei', version: '[1.0,2.0)'
 }
 
-jar {
-    manifest {
-        attributes(
-                'Automatic-Module-Name': 'github.chorman0773.sentry.launch'
-        )
-    }
-}
 
 task sourceJar(type: Jar){
     from sourceSets.main.allJava

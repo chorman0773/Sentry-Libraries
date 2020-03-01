@@ -2,7 +2,6 @@ import java.time.Instant
 
 plugins {
     id 'java'
-    id 'org.javamodularity.moduleplugin' version '1.6.0'
 }
 
 group 'github.chorman0773.sentry'
@@ -22,7 +21,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'github.chorman0773.sentry', name: 'launch', version: "[1.0,2.0)"
+    compile project(":launch")
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     compile group: 'org.slf4j', name: 'slf4j-api', version: '2.0.0-alpha1'
 

@@ -8,5 +8,8 @@ import org.slf4j.Logger;
  * If present, the game may log actions here. 
  */
 public interface LauncherLogService extends LauncherService<LauncherLogService> {
+    /**
+     * Obtains an instance of the SLF4J Logger obtained from the launcher
+     */
     public Logger getLogService();
 }

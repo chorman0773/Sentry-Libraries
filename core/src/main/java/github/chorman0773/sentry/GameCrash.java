@@ -3,7 +3,8 @@ package github.chorman0773.sentry;
 /**
  * Represents a fatal error that occurs during some initialization stage of the game.
  *
- * If caught by a game, the game MUST rethrow the error. The Launcher is intended to handle GameCrash.
+ * If caught by a game, the game SHOULD rethrow the error.
+ * The Launcher is intended to handle GameCrash.
  *
  * Both the Game and Sentry itself may throw a GameCrash.
  */

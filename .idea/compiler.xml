@@ -5,8 +5,8 @@
       <module name="github.chorman0773.sentry.Sentry.test" target="11" />
       <module name="Sentry.launch-service.main" target="11" />
       <module name="Sentry.launch-service.test" target="11" />
-      <module name="Sentry.launcherd-invoke.main" target="11" />
-      <module name="Sentry.launcherd-invoke.test" target="11" />
+      <module name="Sentry.launch.java9" target="9" />
+      <module name="Sentry.launch.main9" target="1.9" />
       <module name="Sentry.main" target="11" />
     </bytecodeTargetLevel>
   </component>
