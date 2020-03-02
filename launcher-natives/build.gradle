@@ -1,26 +1,25 @@
 
 plugins {
-    id 'java'
+    id 'org.ysb33r.rust.lib'  version '0.2'
+}
+
+version = '1.0.0'
+
+rust {
+    executable searchPath()
+}
+
+cargoManifest {
+    manifest.packageInf{
+        name project.name
+        version project.version
+        authors 'Connor Horman <chorman64@gmail.com>'
+    }
 }
 
 
-task 'cargo'(type: Exec){
-    group = "build"
-    description = "Builds a cargo crate"
-    workingDir '.'
-    commandLine 'cargo','build',"--lib","--target-dir","$buildDir/cargo"
-}
-task 'cargo-test'(type: Exec){
-    group = "verification"
-    description = "tests a cargo crate"
-    workingDir '.'
-    commandLine 'cargo','test','--lib'
-}
-
-test {
-    dependsOn 'cargo-test'
-}
-
-jar{
-    dependsOn 'cargo'
+dependencies{
+    rust{
+        compile 'jni:0.14.0'
+    }
 }

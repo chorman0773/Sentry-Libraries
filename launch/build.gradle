@@ -1,8 +1,6 @@
 import java.time.Instant;
 plugins {
     id 'java'
-    id 'maven'
-    id 'maven-publish'
 }
 
 group 'github.chorman0773.sentry'

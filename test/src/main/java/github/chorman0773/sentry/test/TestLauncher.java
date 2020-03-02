@@ -15,10 +15,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.net.URI;
 import java.nio.file.Path;
-import java.security.AccessControlContext;
-import java.security.AccessController;
-import java.security.PermissionCollection;
-import java.security.PrivilegedAction;
+import java.security.*;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Stream;
@@ -160,13 +157,39 @@ public class TestLauncher implements LauncherInterface {
     }
 
     @Override
-    public <T> T privilegedExec(PrivilegedAction<T> privilegedAction, PermissionCollection permissionCollection) throws SecurityException {
-        return AccessController.doPrivileged(privilegedAction);
+    public <T> T privilegedExec(PrivilegedAction<T> r, PermissionCollection permissionCollection) throws SecurityException {
+        return r.run();
     }
 
     @Override
-    public void doPrivileged(Runnable runnable, AccessControlContext ctx) {
-        AccessController.doPrivileged((PrivilegedAction<Void>) ()->{runnable.run();return null;},ctx);
+    public <T> T privilegedExec(PrivilegedAction<T> r, Permission requested) throws SecurityException {
+        return r.run();
+    }
+
+    @Override
+    public void privilegedExec(Runnable r, PermissionCollection requested) throws SecurityException {
+        r.run();
+    }
+
+    @Override
+    public void privilegedExec(Runnable r, Permission requested) throws SecurityException {
+        r.run();
+    }
+
+    @Override
+    public <T> T doPrivileged(PrivilegedAction<T> r, Object ctx) {
+        if(ctx instanceof AccessControlContext)
+            return AccessController.doPrivileged(r,(AccessControlContext)ctx);
+        else
+            throw new SecurityException();
+    }
+
+    @Override
+    public void doPrivileged(Runnable runnable, Object ctx) {
+        if(ctx instanceof AccessControlContext)
+            AccessController.doPrivileged((PrivilegedAction<Void>) ()->{runnable.run();return null;},(AccessControlContext)ctx);
+        else
+            throw new SecurityException();
     }
 
     @Override

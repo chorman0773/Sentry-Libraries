@@ -7,12 +7,25 @@ plugins {
 
 subprojects{
     apply plugin: 'org.javamodularity.moduleplugin'
-
+    repositories {
+        mavenLocal()
+        maven {
+            url = "https://lightningcreations.github.io/Maven"
+            name = "Lightning Creations Maven"
+        }
+        jcenter()
+        mavenCentral()
+    }
 }
 
 group 'github.chorman0773.sentry'
 version '1.1'
 
+def documentedProjects = [
+    ":launch",
+    ":core",
+    ":launcher-control"
+]
 
 repositories {
     mavenLocal()
@@ -45,5 +58,19 @@ task publishSnapshots{
     group = 'publishing'
     dependsOn tasks.withType(PublishToMavenRepository).matching{
         e->e.getName().contains("Snapshot")
+    }
+}
+
+task publishReleasesToLocal{
+    group = 'publishing'
+    dependsOn tasks.withType(PublishToMavenLocal).matching {
+        e->!e.getName().contains("Snapshot")
+    }
+}
+
+task publishReleases{
+    group = 'publishing'
+    dependsOn tasks.withType(PublishToMavenRepository).matching{
+        e->!e.getName().contains("Snapshot")
     }
 }
