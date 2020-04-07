@@ -20,7 +20,20 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-In addition to the terms of the GNU General Public License, another program may refer to any class or method defined by this program by linking it as a classpath dependency. Such a reference is excluded from the terms of the GNU General Public License, and the program may be released under any license, provided that any library provided here is not contained in the final application. This exemption need not be provided in derivative works that do contain any library provided here. 
+In addition to the terms of the GNU General Public License,
+ another program may refer to any class or method defined by this program by linking it as a classpath dependency.
+  Such a reference is excluded from the terms of the GNU General Public License,
+  and the program may be released under any license,
+  provided that any library provided here is not contained in the final application. 
+  This exemption need not be provided in derivative works that do contain any library provided here. 
 
-Additionally, applications which contain any library provided here is permitted to link against other programs that are not Compatible with the GNU General Public License, though must themselves be licensed under the GNU General Public License, potentially with exemptions covering this linkage. 
+Additionally, applications which contain any library provided here is permitted to link against other programs that are not Compatible with the GNU General Public License,
+ though must themselves be licensed under the GNU General Public License,
+  potentially with exemptions covering this linkage. 
 
+### Versioning
+
+The APIs documented here use the semver versioning scheme, with the following exemptions:
+* Any accessible API which is either named using a name which starts with 2 underscores
+ or which uses such a name are not considered part of the API, and are as such exempt from semver.
+* A change to the requirements of the implementation of any "Launcher" interface is not considered to be a breaking change

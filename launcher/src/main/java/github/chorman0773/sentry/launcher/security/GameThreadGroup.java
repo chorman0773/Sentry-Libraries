@@ -1,5 +1,6 @@
 package github.chorman0773.sentry.launcher.security;
 
+import github.chorman0773.sentry.launch.LauncherContext;
 import github.chorman0773.sentry.launch.LauncherInterface;
 
 import java.nio.file.Path;
@@ -15,5 +16,13 @@ public class GameThreadGroup extends ThreadGroup {
     public GameThreadGroup(ThreadGroup parent, String name, Path root) {
         super(parent, name);
         ctx = new GameSecurityContext(root);
+    }
+
+    public LauncherContext getContext(){
+        return new Context(this,lint);
+    }
+
+    public GameSecurityContext getSecurityContext(){
+        return ctx;
     }
 }

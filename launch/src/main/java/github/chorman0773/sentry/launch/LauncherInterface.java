@@ -5,6 +5,7 @@ import github.lightningcreations.lcjei.IEngineInterface;
 import github.lightningcreations.lcjei.IGameInfo;
 import github.lightningcreations.lcjei.resources.ResourceSet;
 
+import javax.swing.*;
 import java.net.URI;
 import java.nio.file.Path;
 import java.security.AccessControlContext;
@@ -16,7 +17,12 @@ import java.util.stream.Stream;
 
 /**
  * Interface for interacting with the Sentry Launcher.
- * An instance of this class is passed to Sentry
+ * An instance of this class is passed to Sentry.
+ *
+ * @apiNote This interface is intended to be implemented by the Sentry Launcher.
+ *  Implementing this interface in user code is unsupported.
+ *  As such, any increase in the requirements for implementation
+ *  shall not be considered a breaking change for the purposes of semantic versioning.
  */
 public interface LauncherInterface extends IEngineInterface<GameLaunchArtifact> {
     /**

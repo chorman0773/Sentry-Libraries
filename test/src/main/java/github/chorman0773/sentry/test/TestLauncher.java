@@ -47,6 +47,7 @@ public class TestLauncher implements LauncherInterface {
         f.setVisible(false);
         f.dispose();
         f = null;
+        System.exit(0);
     }
 
     @Override
@@ -55,6 +56,7 @@ public class TestLauncher implements LauncherInterface {
             throw new IllegalStateException("Launcher is already initialized");
         this.window = container;
         game.initialise(this,args);
+        initialized.set(true);
         return true;
     }
 
@@ -71,8 +73,7 @@ public class TestLauncher implements LauncherInterface {
             public void windowClosing(WindowEvent e) {
                 synchronized(TestLauncher.this) {
                     if (initialized.get())
-                        destroy();
-                    f = null;
+                        close();
                 }
             }
         });

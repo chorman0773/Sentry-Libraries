@@ -21,11 +21,32 @@ subprojects{
 group 'github.chorman0773.sentry'
 version '1.1'
 
-def documentedProjects = [
-    ":launch",
-    ":core",
-    ":launcher-control"
+
+def docOut = project.file('doc');
+
+def docProjects = [
+        "core",
+        "launch",
+        "launcher-control"
 ]
+
+
+task 'allDoc'(type: Javadoc){
+    for(String proj:docProjects) {
+        source = source.plus(project.findProject(proj).sourceSets.main.allJava) as FileTree
+    }
+}
+
+task 'allDocJar'(type: Jar){
+    from allDoc
+    archiveBaseName = 'all-javadoc'
+    archiveVersion = project.version
+}
+
+task 'docs'(type: Copy){
+    from allDoc
+    into project.file('docs/api')
+}
 
 repositories {
     mavenLocal()
@@ -43,6 +64,15 @@ publishing {
             def home = System.getProperty("user.home")
             url = "$home/Maven"
             name = "LightningCreations"
+        }
+    }
+    publications {
+        docs(MavenPublication) {
+            artifact allDocJar
+        }
+        docsSnapshot(MavenPublication) {
+            artifact allDocJar
+            version = project.version+"-SNAPSHOT-"+ Instant.now().toString()
         }
     }
 }

@@ -8,5 +8,5 @@ module github.chorman0773.sentry.launch{
     requires java.desktop;
     requires java.instrument;
     opens github.chorman0773.sentry.launch.helper to github.chorman0773.sentry.launcher;
-    exports github.chorman0773.sentry.launch.helper to github.chorman0773.sentry.launcher.control;
+    exports github.chorman0773.sentry.launch.helper to github.chorman0773.sentry.launcher.control, github.chorman0773.sentry.launcher;
 }

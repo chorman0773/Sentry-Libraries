@@ -1,12 +1,16 @@
 package github.chorman0773.sentry.launcher.search;
 
+import github.chorman0773.sentry.GameCrash;
+import github.chorman0773.sentry.annotation.LoadingHook;
+import github.chorman0773.sentry.launch.LauncherInterface;
 import github.chorman0773.sentry.launch.LoadingPhase;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Type;
 
-import java.text.Annotation;
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class GameAnnotationParser extends AnnotationVisitor {
     private String uuid;
@@ -37,6 +41,32 @@ public class GameAnnotationParser extends AnnotationVisitor {
             super.visitEnum(name,descriptor,value);
             if(name.equals("phase")&&descriptor.equals("github/chorman0773/sentry/launch/LoadingPhase"))
                 phase = LoadingPhase.valueOf(value);
+        }
+
+        public LoadingHook parse(ClassLoader in){
+            return new LoadingHook(){
+
+                @Override
+                public Class<? extends Annotation> annotationType() {
+                    return LoadingHook.class;
+                }
+
+                @Override
+                public LoadingPhase phase() {
+                    return phase;
+                }
+
+                @Override
+                public Class<? extends Consumer<LauncherInterface>> hook() {
+                    try {
+                        var cl =Class.forName(hookCl,false,in);
+
+                        return (Class<? extends Consumer<LauncherInterface>>) cl;
+                    } catch (ClassNotFoundException e) {
+                        throw new GameCrash();
+                    }
+                }
+            };
         }
     }
 
