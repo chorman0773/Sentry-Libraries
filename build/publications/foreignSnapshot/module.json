@@ -1,0 +1,86 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "foreign",
+    "version": "1.0-SNAPSHOT-2020-06-25T16:33:18.308206Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "github.lightningcreations",
+          "module": "lcjei",
+          "version": {
+            "requires": "[1.0,2.0)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "foreign-1.0-SNAPSHOT-2020-06-25T16:33:18.308206Z.jar",
+          "url": "foreign-1.0-SNAPSHOT-2020-06-25T16:33:18.308206Z.jar",
+          "size": 4959,
+          "sha512": "b7eb1c1abbb29d7a02501adf15d26cad4abd41afc2a90326e757e5e148788fd274591a29e857c016ee831e922077651c9eab370e59bc88df7dcb6bf081d60e08",
+          "sha256": "23d51dbbe4a8300e70f96cea36d78cb5b7d93c79396af1e0b87795e32690639e",
+          "sha1": "cedb37bf47f9bd31b707104cde0f2a38e3d5d812",
+          "md5": "0f321e846bfbc1210f0981ef8f6be001"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "github.lightningcreations",
+          "module": "lcjei",
+          "version": {
+            "requires": "[1.0,2.0)"
+          }
+        },
+        {
+          "group": "github.chorman0773.sentry",
+          "module": "launch",
+          "version": {
+            "requires": "[1.1,2.0)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "foreign-1.0-SNAPSHOT-2020-06-25T16:33:18.308206Z.jar",
+          "url": "foreign-1.0-SNAPSHOT-2020-06-25T16:33:18.308206Z.jar",
+          "size": 4959,
+          "sha512": "b7eb1c1abbb29d7a02501adf15d26cad4abd41afc2a90326e757e5e148788fd274591a29e857c016ee831e922077651c9eab370e59bc88df7dcb6bf081d60e08",
+          "sha256": "23d51dbbe4a8300e70f96cea36d78cb5b7d93c79396af1e0b87795e32690639e",
+          "sha1": "cedb37bf47f9bd31b707104cde0f2a38e3d5d812",
+          "md5": "0f321e846bfbc1210f0981ef8f6be001"
+        }
+      ]
+    }
+  ]
+}

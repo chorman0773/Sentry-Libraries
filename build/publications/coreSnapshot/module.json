@@ -1,0 +1,86 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "core",
+    "version": "1.1-SNAPSHOT-2020-06-25T16:33:18.300874Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "2.0.0-alpha1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "core-1.1-SNAPSHOT-2020-06-25T16:33:18.300874Z.jar",
+          "url": "core-1.1-SNAPSHOT-2020-06-25T16:33:18.300874Z.jar",
+          "size": 10237,
+          "sha512": "d10eae38444c72b54fd7f13baeaee05c7bf45dbf1eaa9148c15f8039d279b66eb0aafe021495be24195fb6a621b5a4f8416537e0409da1049fed83f7a24fc8fe",
+          "sha256": "69ad1664ffba6cb2786db749f327713f1099116b0b8eed9e8ec31cc085637739",
+          "sha1": "894c9e2ef36436e94ec724fec5abda304380898a",
+          "md5": "5a6795bce788a6373cd6eaade807951a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "2.0.0-alpha1"
+          }
+        },
+        {
+          "group": "github.chorman0773.sentry",
+          "module": "launch",
+          "version": {
+            "requires": "[1.1,2.0)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "core-1.1-SNAPSHOT-2020-06-25T16:33:18.300874Z.jar",
+          "url": "core-1.1-SNAPSHOT-2020-06-25T16:33:18.300874Z.jar",
+          "size": 10237,
+          "sha512": "d10eae38444c72b54fd7f13baeaee05c7bf45dbf1eaa9148c15f8039d279b66eb0aafe021495be24195fb6a621b5a4f8416537e0409da1049fed83f7a24fc8fe",
+          "sha256": "69ad1664ffba6cb2786db749f327713f1099116b0b8eed9e8ec31cc085637739",
+          "sha1": "894c9e2ef36436e94ec724fec5abda304380898a",
+          "md5": "5a6795bce788a6373cd6eaade807951a"
+        }
+      ]
+    }
+  ]
+}

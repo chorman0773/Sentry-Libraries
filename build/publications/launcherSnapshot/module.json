@@ -1,0 +1,149 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "launcher",
+    "version": "1.0-SNAPSHOT-2020-06-25T16:33:18.331688Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-util",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.6"
+          }
+        },
+        {
+          "group": "commons-cli",
+          "module": "commons-cli",
+          "version": {
+            "requires": "1.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "launcher-1.0-SNAPSHOT-2020-06-25T16:33:18.331688Z.jar",
+          "url": "launcher-1.0-SNAPSHOT-2020-06-25T16:33:18.331688Z.jar",
+          "size": 23014,
+          "sha512": "cf9fc95ba311b1f32eb845f8ecfc931e3507afb1128992b1475e027482569bb99235b212679f01c9e8d6d7fec5a76a8584e2cdb16ba78d0b849b55a60ac28f0c",
+          "sha256": "6a320782107db8603ef9bca76c3dc22456712348d1c58c5667640852c0e35962",
+          "sha1": "36e1022699cdb0d1577483a73708a21a8d4738e3",
+          "md5": "d6c483f2e0bb7899d06f599425287dcd"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-util",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "7.3.1"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.6"
+          }
+        },
+        {
+          "group": "commons-cli",
+          "module": "commons-cli",
+          "version": {
+            "requires": "1.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "launcher-1.0-SNAPSHOT-2020-06-25T16:33:18.331688Z.jar",
+          "url": "launcher-1.0-SNAPSHOT-2020-06-25T16:33:18.331688Z.jar",
+          "size": 23014,
+          "sha512": "cf9fc95ba311b1f32eb845f8ecfc931e3507afb1128992b1475e027482569bb99235b212679f01c9e8d6d7fec5a76a8584e2cdb16ba78d0b849b55a60ac28f0c",
+          "sha256": "6a320782107db8603ef9bca76c3dc22456712348d1c58c5667640852c0e35962",
+          "sha1": "36e1022699cdb0d1577483a73708a21a8d4738e3",
+          "md5": "d6c483f2e0bb7899d06f599425287dcd"
+        }
+      ]
+    }
+  ]
+}

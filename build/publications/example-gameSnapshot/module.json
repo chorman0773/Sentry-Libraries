@@ -1,0 +1,61 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "example-game",
+    "version": "unspecified-SNAPSHOT-2020-06-25T16:33:18.303190Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 14,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "example-game-unspecified-SNAPSHOT-2020-06-25T16:33:18.303190Z.jar",
+          "url": "example-game-unspecified-SNAPSHOT-2020-06-25T16:33:18.303190Z.jar",
+          "size": 261,
+          "sha512": "aa3286811d657df578eeeb795f1267a632742e2a06800bd1da98696e7471a3bccdb840c358e269f84cc38cced7eb568f4d2e9dc00ba363cd0e7f8d22ef31f819",
+          "sha256": "5921990f8412bccd4205fad5722b4f71cfa04745e10aa809c1a0d61d267df024",
+          "sha1": "fd6db48e0fff7bd21741165199e2fa12c4d9c5bb",
+          "md5": "f2f974e0d02ae35dc1aa4edf92923394"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 14,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "example-game-unspecified-SNAPSHOT-2020-06-25T16:33:18.303190Z.jar",
+          "url": "example-game-unspecified-SNAPSHOT-2020-06-25T16:33:18.303190Z.jar",
+          "size": 261,
+          "sha512": "aa3286811d657df578eeeb795f1267a632742e2a06800bd1da98696e7471a3bccdb840c358e269f84cc38cced7eb568f4d2e9dc00ba363cd0e7f8d22ef31f819",
+          "sha256": "5921990f8412bccd4205fad5722b4f71cfa04745e10aa809c1a0d61d267df024",
+          "sha1": "fd6db48e0fff7bd21741165199e2fa12c4d9c5bb",
+          "md5": "f2f974e0d02ae35dc1aa4edf92923394"
+        }
+      ]
+    }
+  ]
+}

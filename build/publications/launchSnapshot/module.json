@@ -1,0 +1,79 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "launch",
+    "version": "1.1-SNAPSHOT-2020-06-25T16:33:18.323205Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "github.lightningcreations",
+          "module": "lcjei",
+          "version": {
+            "requires": "[1.0,2.0)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "launch-1.1-SNAPSHOT-2020-06-25T16:33:18.323205Z.jar",
+          "url": "launch-1.1-SNAPSHOT-2020-06-25T16:33:18.323205Z.jar",
+          "size": 11485,
+          "sha512": "e049283a38651f8470e0a81d73895a6c7ab4813e42f8a47a7ea203b51b5ee0d0abb67e8cc56f9e92684bf9ff6fdaeefd0ec242a283a9717e4e830bd7e4555920",
+          "sha256": "63cb9c80180a28cf333b5a91fe5131b237ce4c712be1ca5395e9602fe0911ed0",
+          "sha1": "e1b100d9f5b75a10f4275f90c3ec6abb9b9f1e21",
+          "md5": "3cde715f0d752d90a97ad91d7c27fbe0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "github.lightningcreations",
+          "module": "lcjei",
+          "version": {
+            "requires": "[1.0,2.0)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "launch-1.1-SNAPSHOT-2020-06-25T16:33:18.323205Z.jar",
+          "url": "launch-1.1-SNAPSHOT-2020-06-25T16:33:18.323205Z.jar",
+          "size": 11485,
+          "sha512": "e049283a38651f8470e0a81d73895a6c7ab4813e42f8a47a7ea203b51b5ee0d0abb67e8cc56f9e92684bf9ff6fdaeefd0ec242a283a9717e4e830bd7e4555920",
+          "sha256": "63cb9c80180a28cf333b5a91fe5131b237ce4c712be1ca5395e9602fe0911ed0",
+          "sha1": "e1b100d9f5b75a10f4275f90c3ec6abb9b9f1e21",
+          "md5": "3cde715f0d752d90a97ad91d7c27fbe0"
+        }
+      ]
+    }
+  ]
+}

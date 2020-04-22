@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>github.chorman0773.sentry</groupId>
+  <artifactId>launch</artifactId>
+  <versioning>
+    <latest>1.1-SNAPSHOT-2020-06-25T16:11:00.303686Z</latest>
+    <release>1.1-SNAPSHOT-2020-06-25T16:11:00.303686Z</release>
+    <versions>
+      <version>1.0</version>
+      <version>1.0-SNAPSHOT-2020-01-23T13:35:24.639359Z</version>
+      <version>1.0-SNAPSHOT-2020-03-01T17:33:51.550192Z</version>
+      <version>1.1</version>
+      <version>unspecified-SNAPSHOT-2020-06-25T14:56:36.888883Z</version>
+      <version>1.1-SNAPSHOT-2020-06-25T15:04:58.253143Z</version>
+      <version>1.1-SNAPSHOT-2020-06-25T16:11:00.303686Z</version>
+    </versions>
+    <lastUpdated>20200625161104</lastUpdated>
+  </versioning>
+</metadata>

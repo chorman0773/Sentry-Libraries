@@ -1,0 +1,79 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "sentry-installer",
+    "version": "1.0-SNAPSHOT-2020-06-25T16:33:18.401927Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 14,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.maven",
+          "module": "maven-artifact",
+          "version": {
+            "requires": "3.6.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sentry-installer-1.0-SNAPSHOT-2020-06-25T16:33:18.401927Z.jar",
+          "url": "sentry-installer-1.0-SNAPSHOT-2020-06-25T16:33:18.401927Z.jar",
+          "size": 1330,
+          "sha512": "acc5c1eeafd6bf1b1ecd9b90f52c93d7aa470338bbbf959c7430fec8ff9eedb8cdcadc83de0dac50dbc406fc03498b58f504cbd178f6e55601e7994e36adcf32",
+          "sha256": "8ad35da43c45eeb92ffa32d61e45e6a8cb35d99cfd7305531b6e688a42f41499",
+          "sha1": "94cad3fb492929ea3342ea629e2ac362f44471dd",
+          "md5": "af427bdc0a4cc0a91aaf1ac987f79bba"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 14,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.maven",
+          "module": "maven-artifact",
+          "version": {
+            "requires": "3.6.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sentry-installer-1.0-SNAPSHOT-2020-06-25T16:33:18.401927Z.jar",
+          "url": "sentry-installer-1.0-SNAPSHOT-2020-06-25T16:33:18.401927Z.jar",
+          "size": 1330,
+          "sha512": "acc5c1eeafd6bf1b1ecd9b90f52c93d7aa470338bbbf959c7430fec8ff9eedb8cdcadc83de0dac50dbc406fc03498b58f504cbd178f6e55601e7994e36adcf32",
+          "sha256": "8ad35da43c45eeb92ffa32d61e45e6a8cb35d99cfd7305531b6e688a42f41499",
+          "sha1": "94cad3fb492929ea3342ea629e2ac362f44471dd",
+          "md5": "af427bdc0a4cc0a91aaf1ac987f79bba"
+        }
+      ]
+    }
+  ]
+}

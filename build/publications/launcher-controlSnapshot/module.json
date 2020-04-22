@@ -1,0 +1,70 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "launcher-control",
+    "version": "unspecified-SNAPSHOT-2020-06-25T14:56:36.999133Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "tqbhbnkwebgetarbih2u255aay"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "launcher-control-unspecified-SNAPSHOT-2020-06-25T14:56:36.999133Z.jar",
+          "url": "launcher-control-unspecified-SNAPSHOT-2020-06-25T14:56:36.999133Z.jar",
+          "size": 5414,
+          "sha512": "c2412bca1ae6071ff97e1fd026fcbe24b68af4059141cd9a6596cea9400c097a26ca004f02a26cb3ed403098efd806ac2e0bcc17e9f0a22ed139cbe980917291",
+          "sha256": "0669a0aea3255235ef486c15101550778ed3edc48993fbe5e556996ca52aa429",
+          "sha1": "67ccfc94d39ecc663736f886ae3ce48fd114c02f",
+          "md5": "7167bbd3caa84071a1a7753e13e35230"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "github.chorman0773.sentry",
+          "module": "launch",
+          "version": {
+            "requires": "[1.1,2.0)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "launcher-control-unspecified-SNAPSHOT-2020-06-25T14:56:36.999133Z.jar",
+          "url": "launcher-control-unspecified-SNAPSHOT-2020-06-25T14:56:36.999133Z.jar",
+          "size": 5414,
+          "sha512": "c2412bca1ae6071ff97e1fd026fcbe24b68af4059141cd9a6596cea9400c097a26ca004f02a26cb3ed403098efd806ac2e0bcc17e9f0a22ed139cbe980917291",
+          "sha256": "0669a0aea3255235ef486c15101550778ed3edc48993fbe5e556996ca52aa429",
+          "sha1": "67ccfc94d39ecc663736f886ae3ce48fd114c02f",
+          "md5": "7167bbd3caa84071a1a7753e13e35230"
+        }
+      ]
+    }
+  ]
+}

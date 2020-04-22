@@ -1,0 +1,93 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "test",
+    "version": "1.1-SNAPSHOT-2020-06-25T16:33:18.407622Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "2.0.0-alpha1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "test-1.1-SNAPSHOT-2020-06-25T16:33:18.407622Z.jar",
+          "url": "test-1.1-SNAPSHOT-2020-06-25T16:33:18.407622Z.jar",
+          "size": 9712,
+          "sha512": "c53a58adddb3ef61e65110453f59a0fc7511787df4690ce69142b32baabc4bfa532aa60af1ee4c792dffb7c9a7f76e2ce6942157325b0d9ffffa24bda29ab8cf",
+          "sha256": "222621589eb1d8ef00d954c97b16e9afe951fbe04dbd0a36cf5f3d8d620e6a13",
+          "sha1": "71132225ff004e83f928237adc4bf71f5c778182",
+          "md5": "f412ad895982bf5fffb97f6770fe13ad"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "2.0.0-alpha1"
+          }
+        },
+        {
+          "group": "github.chorman0773.sentry",
+          "module": "launch",
+          "version": {
+            "requires": "[1.1,2.0)"
+          }
+        },
+        {
+          "group": "github.chorman0773.sentry",
+          "module": "core",
+          "version": {
+            "requires": "[1.1,2.0)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "test-1.1-SNAPSHOT-2020-06-25T16:33:18.407622Z.jar",
+          "url": "test-1.1-SNAPSHOT-2020-06-25T16:33:18.407622Z.jar",
+          "size": 9712,
+          "sha512": "c53a58adddb3ef61e65110453f59a0fc7511787df4690ce69142b32baabc4bfa532aa60af1ee4c792dffb7c9a7f76e2ce6942157325b0d9ffffa24bda29ab8cf",
+          "sha256": "222621589eb1d8ef00d954c97b16e9afe951fbe04dbd0a36cf5f3d8d620e6a13",
+          "sha1": "71132225ff004e83f928237adc4bf71f5c778182",
+          "md5": "f412ad895982bf5fffb97f6770fe13ad"
+        }
+      ]
+    }
+  ]
+}

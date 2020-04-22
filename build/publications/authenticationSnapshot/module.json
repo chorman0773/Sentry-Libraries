@@ -1,0 +1,86 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "authentication",
+    "version": "1.1-SNAPSHOT-2020-06-25T16:33:18.296249Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.6"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "authentication-1.1-SNAPSHOT-2020-06-25T16:33:18.296249Z.jar",
+          "url": "authentication-1.1-SNAPSHOT-2020-06-25T16:33:18.296249Z.jar",
+          "size": 9971,
+          "sha512": "1223c32137e5ce72859f975d4d1bc5fac254b7684337769d9806599ae39184d532b991abe897daeb1435625b5c323ac89fe84433942a96c3d82b94d6943a4e0a",
+          "sha256": "0a15c0619dc6c0c082ffc02559285b9b11080c833cba30d186798c0d96987de7",
+          "sha1": "065dd8738e08c41d1ed4d684691d41d8a7a866ed",
+          "md5": "cbe3a5e456802ccfcde1f7aecae53a0b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.6"
+          }
+        },
+        {
+          "group": "github.chorman0773.sentry",
+          "module": "launch",
+          "version": {
+            "requires": "[1.1,2.0)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "authentication-1.1-SNAPSHOT-2020-06-25T16:33:18.296249Z.jar",
+          "url": "authentication-1.1-SNAPSHOT-2020-06-25T16:33:18.296249Z.jar",
+          "size": 9971,
+          "sha512": "1223c32137e5ce72859f975d4d1bc5fac254b7684337769d9806599ae39184d532b991abe897daeb1435625b5c323ac89fe84433942a96c3d82b94d6943a4e0a",
+          "sha256": "0a15c0619dc6c0c082ffc02559285b9b11080c833cba30d186798c0d96987de7",
+          "sha1": "065dd8738e08c41d1ed4d684691d41d8a7a866ed",
+          "md5": "cbe3a5e456802ccfcde1f7aecae53a0b"
+        }
+      ]
+    }
+  ]
+}

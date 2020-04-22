@@ -1,0 +1,61 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "github.chorman0773.sentry",
+    "module": "launcher-installer",
+    "version": "unspecified-SNAPSHOT-2020-06-25T16:33:18.345274Z",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "koucy43qrva7rcxkvefyzwtdhq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 14,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "launcher-installer-unspecified-SNAPSHOT-2020-06-25T16:33:18.345274Z.jar",
+          "url": "launcher-installer-unspecified-SNAPSHOT-2020-06-25T16:33:18.345274Z.jar",
+          "size": 261,
+          "sha512": "7795a4b3c4f92dc09ab91117c7cb538e5e7c4c07854ffd388a2fbbad79a20ee32c9778b5ef4fbbfe724b3e3957db75eab0a008652d3714eca54ba0249a0852a9",
+          "sha256": "c763281245a39c76d60fa6859762b4b078c1f10aeb0a38a3bd0b41e75bcad5f0",
+          "sha1": "4d42a5daeff27521e5416ed0bd90d80641fac6df",
+          "md5": "37c3b6207cfe875ebcb7d200a9e3af8c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 14,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "launcher-installer-unspecified-SNAPSHOT-2020-06-25T16:33:18.345274Z.jar",
+          "url": "launcher-installer-unspecified-SNAPSHOT-2020-06-25T16:33:18.345274Z.jar",
+          "size": 261,
+          "sha512": "7795a4b3c4f92dc09ab91117c7cb538e5e7c4c07854ffd388a2fbbad79a20ee32c9778b5ef4fbbfe724b3e3957db75eab0a008652d3714eca54ba0249a0852a9",
+          "sha256": "c763281245a39c76d60fa6859762b4b078c1f10aeb0a38a3bd0b41e75bcad5f0",
+          "sha1": "4d42a5daeff27521e5416ed0bd90d80641fac6df",
+          "md5": "37c3b6207cfe875ebcb7d200a9e3af8c"
+        }
+      ]
+    }
+  ]
+}

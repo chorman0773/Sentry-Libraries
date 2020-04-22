@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>github.chorman0773.sentry</groupId>
+  <artifactId>launcher-agent</artifactId>
+  <versioning>
+    <latest>1.0-SNAPSHOT-2020-06-25T16:11:00.712692Z</latest>
+    <release>1.0-SNAPSHOT-2020-06-25T16:11:00.712692Z</release>
+    <versions>
+      <version>unspecified-SNAPSHOT-2020-06-25T14:56:36.971504Z</version>
+      <version>1.0-SNAPSHOT-2020-06-25T15:04:58.289346Z</version>
+      <version>1.0-SNAPSHOT-2020-06-25T16:11:00.712692Z</version>
+    </versions>
+    <lastUpdated>20200625161104</lastUpdated>
+  </versioning>
+</metadata>
