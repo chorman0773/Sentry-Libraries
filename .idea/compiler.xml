@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
       <module name="github.chorman0773.sentry.Sentry.test" target="11" />
       <module name="Sentry.launch-service.main" target="11" />
       <module name="Sentry.launch-service.test" target="11" />
       <module name="Sentry.launch.java9" target="9" />
       <module name="Sentry.launch.main9" target="1.9" />
       <module name="Sentry.main" target="11" />
+      <module name="Sentry.text" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -32,8 +32,8 @@ import java.util.Set;
  *   though the server will close them automatically.
  */
 public class Session implements Destroyable, Closeable {
-    private KeyPair keys;
-    private HttpClient manager;
+    private final KeyPair keys;
+    private final HttpClient manager;
     private byte[] t1;
     private byte[] t2;
     private boolean destroyed;

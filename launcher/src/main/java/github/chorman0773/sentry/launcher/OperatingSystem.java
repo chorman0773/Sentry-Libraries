@@ -6,7 +6,7 @@ public enum OperatingSystem {
     LINUX,
     BSD,
     OTHER;
-    public static OperatingSystem getOs(){
+    private static OperatingSystem getOs0(){
         var name = System.getProperty("os.name");
         if (name.startsWith("Windows")) // We are on Windows,
             return WINDOWS;
@@ -18,5 +18,9 @@ public enum OperatingSystem {
             return BSD;
         else
             return OTHER;
+    }
+    private static final OperatingSystem cached = getOs0();
+    public static OperatingSystem getOs(){
+        return cached;
     }
 }

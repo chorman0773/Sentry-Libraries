@@ -10,7 +10,7 @@ public class AgentMain {
 
     public static void premain(String[] args, Instrumentation instrument) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
         Class<?> cl = ClassLoader.getSystemClassLoader().loadClass("github.chorman0773.sentry.launcher.bootstrap.InitPathInstrument");
-        VarHandle handle = MethodHandles.lookup().findStaticVarHandle(cl,"instrument",Instrumentation.class);
+        VarHandle handle = MethodHandles.privateLookupIn(cl,MethodHandles.lookup()).findStaticVarHandle(cl,"instrument",Instrumentation.class);
         handle.set(instrument);
     }
 }

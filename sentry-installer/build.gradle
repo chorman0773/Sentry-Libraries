@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'github.chorman0773.sentry'
+version '1.0'
+
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.maven/maven-artifact
+    compile group: 'org.apache.maven', name: 'maven-artifact', version: '3.6.3'
+}

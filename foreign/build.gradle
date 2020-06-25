@@ -26,31 +26,3 @@ dependencies {
     runtimeOnly group: 'github.chorman0773.sentry', name: 'launch', version: "[1.1,2.0)"
 }
 
-
-task sourceJar(type: Jar){
-    from sourceSets.main.allJava
-    archiveClassifier = "sources"
-}
-
-task javadocJar(type: Jar){
-    from javadoc
-    archiveClassifier = "javadoc"
-}
-
-publishing {
-    publications {
-        foreign(MavenPublication){
-            from components.java
-            artifact sourceJar
-            artifact javadocJar
-            artifactId = project.archivesBaseName
-        }
-        foreignSnapshot(MavenPublication){
-            from components.java
-            artifact sourceJar
-            artifact javadocJar
-            artifactId = project.archivesBaseName
-            version = project.version+"-SNAPSHOT-"+ Instant.now().toString()
-        }
-    }
-}

@@ -17,4 +17,5 @@ include 'gradle-plugin'
 include 'launcherd'
 include 'example-game'
 include 'launcher-agent'
+include 'sentry-installer'
 

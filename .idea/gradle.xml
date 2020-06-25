@@ -4,8 +4,11 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="14" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -22,6 +25,7 @@
             <option value="$PROJECT_DIR$/launcher-natives" />
             <option value="$PROJECT_DIR$/launcherd" />
             <option value="$PROJECT_DIR$/launcherd-invoke" />
+            <option value="$PROJECT_DIR$/sentry-installer" />
             <option value="$PROJECT_DIR$/test" />
             <option value="$PROJECT_DIR$/text" />
           </set>

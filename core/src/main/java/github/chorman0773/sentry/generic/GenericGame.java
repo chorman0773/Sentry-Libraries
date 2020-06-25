@@ -3,6 +3,8 @@ package github.chorman0773.sentry.generic;
 import github.chorman0773.sentry.GameBasic;
 
 import java.lang.invoke.VarHandle;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.LockSupport;
 
@@ -14,6 +16,9 @@ import java.util.concurrent.locks.LockSupport;
 public abstract class GenericGame extends GameBasic {
     private Thread tickThread;
     private int updateRate;
+    private Duration lastTickTime;
+    private Duration totalTickTime;
+    private long tickCount;
     private final AtomicBoolean running = new AtomicBoolean();
     private final AtomicBoolean pauseWhileDisabled = new AtomicBoolean(true);
 
@@ -79,8 +84,11 @@ public abstract class GenericGame extends GameBasic {
 
     private void updateRunner(){
         while(this.shouldClose()){
+            Instant tickBegin = Instant.now();
             tick();
             LockSupport.park();
+            this.lastTickTime = Duration.between(tickBegin,Instant.now());
+            this.totalTickTime = this.totalTickTime.plus(lastTickTime);
         }
     }
 
@@ -89,7 +97,7 @@ public abstract class GenericGame extends GameBasic {
         tickThread.start();
         while(!this.shouldClose()){
             try {
-                Thread.sleep(1000/updateRate);
+                Thread.sleep(1000/updateRate); // noinspection
                 if(this.running.getAcquire()&&this.pauseWhileDisabled.getAcquire())
                     LockSupport.unpark(tickThread);
             } catch (InterruptedException e) {

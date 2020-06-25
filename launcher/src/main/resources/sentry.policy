@@ -1,0 +1,20 @@
+
+grant codeBase "jrt:/github.chorman0773.sentry.launcher" {
+    permission java.security.AllPermissions;
+}
+
+grant codeBase "jrt:/github.chorman0773.sentry.launcher.agent" {
+    permission java.security.AllPermissions;
+}
+
+grant codeBase "jrt:/github.chorman0773.sentry.launcher.control" {
+    permission java.security.AllPermissions;
+}
+
+grant codeBase "jrt:/github.chorman0773.sentry.launch" {
+    permission java.security.AllPermissions;
+}
+
+grant codeBase "jrt:/github.chorman0773.sentry.core" {
+    permission java.security.AllPermissions;
+}

@@ -19,30 +19,3 @@ dependencies {
 
 }
 
-task sourceJar(type: Jar){
-    from sourceSets.main.allJava
-    archiveClassifier = "sources"
-}
-
-task javadocJar(type: Jar){
-    from javadoc
-    archiveClassifier = "javadoc"
-}
-
-publishing {
-    publications {
-        core(MavenPublication){
-            from components.java
-            artifact sourceJar
-            artifact javadocJar
-            artifactId = project.archivesBaseName
-        }
-        coreSnapshot(MavenPublication){
-            from components.java
-            artifact sourceJar
-            artifact javadocJar
-            artifactId = project.archivesBaseName
-            version = project.version+"-SNAPSHOT-"+ Instant.now().toString()
-        }
-    }
-}
