@@ -25,7 +25,7 @@ public class TestLauncher implements LauncherInterface {
     private final AtomicBoolean initialized = new AtomicBoolean();
     private final AtomicBoolean running = new AtomicBoolean();
     private final Path root;
-    private Container window;
+    protected Container window;
     private Frame f;
     private final GameLaunchArtifact game;
     private final ResourceSet<Path> resources;

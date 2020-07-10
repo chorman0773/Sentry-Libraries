@@ -11,3 +11,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.maven/maven-artifact
     compile group: 'org.apache.maven', name: 'maven-artifact', version: '3.6.3'
 }
+
+application {
+    mainClassName = 'github.chorman0773.sentry.launcher.installler.Main'
+}

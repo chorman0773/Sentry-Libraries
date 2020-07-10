@@ -18,3 +18,7 @@ grant codeBase "jrt:/github.chorman0773.sentry.launch" {
 grant codeBase "jrt:/github.chorman0773.sentry.core" {
     permission java.security.AllPermissions;
 }
+
+grant codeBase "jrt:/github.chorman0773.sentry.foreign"{
+    permission java.security.AllPermissions;
+}

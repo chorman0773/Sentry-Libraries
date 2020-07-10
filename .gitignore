@@ -5,6 +5,7 @@
 /launch/build/
 /launcher-control/.gradle/
 /launcher-control/build/
-*/build
+*/build/
 *.o
 */target
+/build/

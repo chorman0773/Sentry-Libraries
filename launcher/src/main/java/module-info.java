@@ -2,6 +2,7 @@ module github.chorman0773.sentry.launcher {
     requires github.chorman0773.sentry.core;
     requires github.chorman0773.sentry.launch;
     requires github.chorman0773.sentry.launcher.control;
+    requires github.chorman0773.sentry.launcherd;
     requires github.chorman0773.sentry.foreign;
     requires github.chorman0773.sentry.test;
     requires github.lightningcreations.lcjei;

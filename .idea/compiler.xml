@@ -7,8 +7,13 @@
       <module name="Sentry.launch-service.test" target="11" />
       <module name="Sentry.launch.java9" target="9" />
       <module name="Sentry.launch.main9" target="1.9" />
+      <module name="Sentry.launcher-installer" target="14" />
+      <module name="Sentry.launcher-installer.main" target="14" />
+      <module name="Sentry.launcher-installer.test" target="14" />
+      <module name="Sentry.launcherd-invoke" target="14" />
+      <module name="Sentry.launcherd-invoke.main" target="14" />
+      <module name="Sentry.launcherd-invoke.test" target="14" />
       <module name="Sentry.main" target="11" />
-      <module name="Sentry.text" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>

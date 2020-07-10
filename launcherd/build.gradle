@@ -1,7 +1,4 @@
 
-plugins {
-    id 'java'
-}
 
 group 'github.chorman0773.sentry'
 version '1.0'

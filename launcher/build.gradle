@@ -18,6 +18,10 @@ repositories {
     mavenCentral()
 }
 
+application {
+    mainClassName = "github.chorman0773.sentry.launcher.StartLauncher"
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compileOnly project(":launch")
@@ -25,6 +29,7 @@ dependencies {
     compileOnly project(":launcher-control")
     compileOnly project(":foreign")
     compileOnly project(":test")
+    compileOnly project(":launcherd")
     testCompile group: 'github.chorman0773.sentry', name: 'test', version: "[1.0,2.0)"
     // https://mvnrepository.com/artifact/org.ow2.asm/asm
     compile group: 'org.ow2.asm', name: 'asm', version: '7.3.1'

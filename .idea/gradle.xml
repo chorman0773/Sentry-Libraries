@@ -21,10 +21,7 @@
             <option value="$PROJECT_DIR$/launcher" />
             <option value="$PROJECT_DIR$/launcher-agent" />
             <option value="$PROJECT_DIR$/launcher-control" />
-            <option value="$PROJECT_DIR$/launcher-installer" />
-            <option value="$PROJECT_DIR$/launcher-natives" />
             <option value="$PROJECT_DIR$/launcherd" />
-            <option value="$PROJECT_DIR$/launcherd-invoke" />
             <option value="$PROJECT_DIR$/sentry-installer" />
             <option value="$PROJECT_DIR$/test" />
             <option value="$PROJECT_DIR$/text" />
