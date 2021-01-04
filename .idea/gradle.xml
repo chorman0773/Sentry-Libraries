@@ -8,7 +8,7 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="14" />
+        <option name="gradleJvm" value="15" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -24,10 +24,8 @@
             <option value="$PROJECT_DIR$/launcherd" />
             <option value="$PROJECT_DIR$/sentry-installer" />
             <option value="$PROJECT_DIR$/test" />
-            <option value="$PROJECT_DIR$/text" />
           </set>
         </option>
-        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

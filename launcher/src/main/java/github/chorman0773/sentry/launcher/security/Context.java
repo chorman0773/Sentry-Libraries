@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import java.security.PrivilegedAction;
 
-public class Context extends LauncherContext {
+class Context extends LauncherContext {
 
     private static final __HiddenType construct;
     private final GameThreadGroup group;

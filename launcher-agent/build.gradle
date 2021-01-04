@@ -9,6 +9,7 @@ sourceCompatibility = 11
 
 jar{
     manifest.attributes(
-            'Premain-Class': 'github.chorman0773.sentry.launcher.agent'
+            'Premain-Class': 'github.chorman0773.sentry.launcher.agent.AgentMain',
+            'Agent-Class': 'github.chorman0773.sentry.launcher.agent.AgentMain'
     )
 }

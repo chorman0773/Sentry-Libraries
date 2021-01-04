@@ -8,7 +8,7 @@ plugins {
 subprojects{
     apply plugin: 'java'
     apply plugin: 'org.javamodularity.moduleplugin'
-    sourceCompatibility = targetCompatibility = 11
+    sourceCompatibility = targetCompatibility = 15
     repositories {
         mavenLocal()
         maven {

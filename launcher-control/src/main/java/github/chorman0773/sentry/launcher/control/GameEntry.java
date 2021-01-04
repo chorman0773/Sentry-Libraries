@@ -20,7 +20,7 @@ public interface GameEntry {
     /**
      * Prepares a new handle for launching the game.
      */
-    @ChecksPermission("LauncherProfilePermission({this.owningProfile().getName()),launchgame)")
+    @ChecksPermission("LauncherProfilePermission({this.owningProfile().getName()},launchgame)")
     @ChecksPermission("LauncherPermission(launchgame)")
     public GameHandle prepareLaunch();
 

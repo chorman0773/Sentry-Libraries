@@ -107,7 +107,7 @@ public interface LauncherInterface extends IEngineInterface<GameLaunchArtifact> 
      * @throws SecurityException if the calling Code does not have LauncherPermission("lcupm.install.<i>scheme</i>"),
      *  the specified scheme accesses a permission protected resource (such as a file on the file system),
      *  and the System SecurityManager denies the caller access to that resource,
-     *  or the System SecurityManager Denies the caller the LauncherPermission "instrument
+     *  or the System SecurityManager Denies the caller the LauncherPermission instrument
      */
     @ChecksPermission("LauncherPermission(instrument)")
     public default void loadAgent(URI uri) throws SecurityException, UnsupportedOperationException, IllegalArgumentException{
